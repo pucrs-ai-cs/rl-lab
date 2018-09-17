@@ -1,6 +1,12 @@
 # Reinforcement-Learning Reference
 Reference Implementation for Reinforcement Assignment**
 
+### Installation
+To install pygame on PUCRS computers, use this command:
+```
+pip install pygame --user
+```
+
 ### Source:
 These are the files required to build your reinforcement learning algorithm. 
 
