@@ -20,7 +20,7 @@ These are the files required to build your reinforcement learning algorithm.
 The goal of this assignment is to implement the core of the Q-Learning algorithm. You will be responsible for implementing three distinct methods:
 - The exploration function(**f()** method)
 - The Q-Learning update method (**get_action()** method)
-- Implemnet a decreasing function for the learning rate (**alpha()** method)
+- Implement a decreasing function for the learning rate (**alpha()** method)
 
 In this scenario we help the agent, via reinforcement learning, to navigate and maximise rewards within a map, aiming to reach the move between an initial state and the goal state, represented by a treasure chest. In some scenarios there will be a rupee that the agent can gather. The rewards are +50 for reaching the chest, +40 for getting the rupee and -1 for any other tile.
 
