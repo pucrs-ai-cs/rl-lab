@@ -10,6 +10,7 @@ class Agent:
 
     def __init__(self):
         self.env = None
+        self.metric_history = list()
 
     
     ################-------------------###################
