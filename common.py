@@ -11,7 +11,7 @@ DEBUG       = lambda: logging.getLogger().level == logging.DEBUG
 IS_DEBUG    = DEBUG()
 
 MAX_TRAINING_EPISODES = 10000
-CONVERGENCE_THRESHOLD = 0.05
+CONVERGENCE_THRESHOLD = 0.001
 
 # Frames per second (more means faster)
 FPS         = 60
