@@ -7,6 +7,7 @@ from common import *
 from util import *
 from agent import *
 
+
 class Link(Agent):
 
     def __init__(self):
@@ -17,7 +18,7 @@ class Link(Agent):
         self.state = None
         self.reward = None
         self.action = NO_OP
-        self.p_state = None 
+        self.p_state = None
         self.p_reward = None
         self.p_action = None
         self.gamma = 0.9
@@ -50,7 +51,7 @@ class Link(Agent):
             self.env.execute(action)
             if env.terminal((self.state.x, self.state.y)):
                 executions += 1
-                
+
                 self.p_state = self.p_action = self.p_reward = self.state = self.action = self.reward = None
                 self.reset(env)
 
@@ -64,19 +65,19 @@ class Link(Agent):
 
         print('Episode' , executions, ' : converged at', self.convergence)
         print('Last plan executed: ', [ACTIONS_NAMES[x] for x in last_plan])
-        #self.return_policy()
+        # self.return_policy()
 
     def alpha(self, qv):
-        #YOUR IMPLEMENTATION HERE
-        return alpha(self,qv)
+        # YOUR IMPLEMENTATION HERE
+        pass
 
     def f(self, qv):
-        #YOUR IMPLEMENTATION HERE
-        return f(self,qv)
+        # YOUR IMPLEMENTATION HERE
+        pass
 
     def get_action(self, state):
-        #YOUR IMPLEMENTATION HERE
-        return get_action(self,state)   
+        # YOUR IMPLEMENTATION HERE
+        pass
 
     def max_a(self, state):
         """
@@ -104,7 +105,7 @@ class Link(Agent):
         """
         a = NO_OP
         max_value = float('-inf')
-        if state == None:
+        if state is None:
             return a
         for action in self.env.available_actions((state.x, state.y)):
             qv = qvalue.QValue(state, action)
@@ -138,10 +139,9 @@ class Link(Agent):
         Execute actions.
         """
         self.action = self.argmax_a(self.make_state(env))
-        #print "Running action: ", ACTIONS_NAMES[self.action]
+        # print "Running action: ", ACTIONS_NAMES[self.action]
         self.state, self.reward = env.execute(self.action)
         return self.action, self.state
-
 
     def convergence_metric(self):
         """
@@ -150,6 +150,3 @@ class Link(Agent):
         prev = sum(self.prev_qtable.values())
         curr = sum(self.q_values.values())
         return math.sqrt(abs(curr - prev))
-
-
-

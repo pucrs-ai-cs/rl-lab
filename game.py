@@ -6,6 +6,7 @@ from common import *
 from util import *
 from environment import *
 
+
 class Game:
 
     def __init__(self, env, agt):
