@@ -1,5 +1,4 @@
-# Reinforcement-Learning Reference
-Reference Implementation for Reinforcement Assignment**
+# Reinforcement-Learning Practical
 
 ### Installation
 To install pygame on PUCRS computers, use this command:
